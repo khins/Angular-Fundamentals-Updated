@@ -16,7 +16,8 @@ import { Router } from '@angular/router';
 })
 export class CreateEventComponent {
     /**
-     *
+     * Linking to Routes
+     * https://app.pluralsight.com/library/courses/angular-fundamentals/transcript
      */
     constructor(private router: Router) {
     }
