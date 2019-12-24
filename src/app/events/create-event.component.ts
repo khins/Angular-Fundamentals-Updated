@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
     `
 })
 export class CreateEventComponent {
+    isDirty:boolean = true;
     /**
      * Linking to Routes
      * https://app.pluralsight.com/library/courses/angular-fundamentals/transcript
