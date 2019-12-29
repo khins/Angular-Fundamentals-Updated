@@ -15,12 +15,29 @@ import { EventService } from './shared';
 })
 export class CreateEventComponent {
     newEvent;
+    event: any; 
     isDirty:boolean = true;
     /**
      * Linking to Routes
      * https://app.pluralsight.com/library/courses/angular-fundamentals/transcript
      */
     constructor(private router: Router, private eventService: EventService) {
+    }
+
+    ngOnInit() {
+        this.event = {
+            name: 'Ng Spectacular',
+            date: '8/8/2018',
+            time: '10am',
+            price: 799.23,
+            location: {
+                address: '3243 Hppy st',
+                city: 'Felicity',
+                country: 'Angularistan'
+            },
+            onlineUrl: 'http://ngspectacular.com',
+            imageUrl: 'http://ngspectacular.com/logo.png'
+        };
     }
 
     saveEvent(formValues) {
