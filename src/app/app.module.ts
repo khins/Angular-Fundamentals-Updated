@@ -11,7 +11,9 @@ import {
   EventsListResolver,
   CreateSessionComponent,
   SessionListComponent,
-  DurationPipe
+  DurationPipe,
+  UpvoteComponent,
+  VoterService
 } from './events/index'
 
 import { NavBarcomponent } from './nav/navbar.component';
@@ -46,6 +48,7 @@ let jquery = window['$'];
     SessionListComponent,
     CollapsibleWellComponent,
     SimpleModalComponent,
+    UpvoteComponent,
     ModalTriggerDirective,
     DurationPipe
   ],
@@ -55,6 +58,7 @@ let jquery = window['$'];
     {provide: JQ_TOKEN, useValue:jquery},
     EventRouteActivator,
     EventsListResolver,
+    VoterService,
     AuthService,
     { provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState 
