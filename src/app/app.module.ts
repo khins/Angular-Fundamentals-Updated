@@ -15,7 +15,7 @@ import {
 } from './events/index'
 
 import { NavBarcomponent } from './nav/navbar.component';
-import { JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWellComponent} from './common/index';
+import { JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWellComponent, SimpleModalComponent} from './common/index';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 
@@ -45,11 +45,13 @@ let jquery = window['$'];
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
+    SimpleModalComponent,
     DurationPipe
   ],
   providers: [
     EventService,
     {provide: TOASTR_TOKEN, useValue:toastr},
+    {provide: JQ_TOKEN, useValue:jquery},
     EventRouteActivator,
     EventsListResolver,
     AuthService,
