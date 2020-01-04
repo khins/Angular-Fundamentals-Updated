@@ -13,7 +13,8 @@ import {
   SessionListComponent,
   DurationPipe,
   UpvoteComponent,
-  VoterService
+  VoterService,
+  LocationValidator
 } from './events/index'
 
 import { NavBarcomponent } from './nav/navbar.component';
@@ -50,6 +51,7 @@ let jquery = window['$'];
     SimpleModalComponent,
     UpvoteComponent,
     ModalTriggerDirective,
+    LocationValidator,
     DurationPipe
   ],
   providers: [
@@ -59,6 +61,7 @@ let jquery = window['$'];
     EventRouteActivator,
     EventsListResolver,
     VoterService,
+    LocationValidator,
     AuthService,
     { provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState 
